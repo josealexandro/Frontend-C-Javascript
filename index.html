@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NETFLIX</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="D:\Netflix\css\style.css">
+</head>
+<body>
+  <header>
+  	<div class="center">
+  		<div class="header-left">
+  			<a href=""><img src="img/logo_netflix.png"></a>
+  			<div class="menu-header">
+  				<ul>
+  					<li><a href="">Inicio</a></li>
+  					<li><a href="">Séries</a></li>
+  					<li><a href="">Filmes</a></li>
+  					<li><a href="">Adicionados Recentemente</a></li>
+  					<li><a href="">Minha Lista</a></li>
+  					
+  				</ul>
+  			</div>
+  		</div>
+
+  		<div class="header-right">
+  			<div class="search">
+  				<i class="fa fa-search"></i>
+  			</div>
+  			<a href="">INFANTIL</a>
+  			<i class="fa fa-gift" aria-hidden="true"></i>
+  			<div class="notifications">
+  				<div class="circle-notifications">
+  					<span>10</span>
+  				</div>
+  				<i class="fa fa-bell" aria-hidden="true"></i>
+  			</div>
+  			
+
+  		</div>
+  		<div class="clear"></div>
+  	</div>
+    
+
+  	<section class="destaque">
+  		<video autoplay muted loop id ="video-destaque" >
+  			<source src="img/arrow.mp4" type="video/mp4">
+  			your browser does't support HTML5 vídeo	
+  		</video>
+  		<div class="overlay"></div>
+  		<div class="texto-destaque">
+  			<h2>JAFS</h2>
+  			<h3>Assista a 5° temporada agora!</h3>
+  			<p>Aqui vai a descrição completa de todo o conteudo.</p>
+  			<br>
+  			<a href=""><i class="fa fa-play" aria-hidden="true"></i> Assistir</a>
+  			<a href=""><i class="fa fa-play" aria-hidden="true"></i> Mais Informações</a>
+  			<a href=""><i class="fa fa-play" aria-hidden="true"></i> Assistir</a>
+  		</div>
+  	</section>
+  </header>
+
+  <section class="vitrine">
+		<div class="vitrine-flex">
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/arrow.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/house.jpg');"></div>
+			</div>
+				<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/costura1.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/arrow.jpg');"></div>
+			</div>
+		<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/costura1.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/suits.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('img/house.jpg');"></div>
+			</div>
+	</div> 
+</section>
+
+<script src="jquery.js"></script>
+	<script src="slick.min.js"></script>
+
+	<script>
+		$('.vitrine-flex').slick({
+	dots: false,
+	arrows:false,
+  infinite: false,
+  centerMode: false,
+  speed:1000,
+  slidesToShow: 6,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnHover:false,
+        responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+  }]
+	});
+
+		$('.vitrine-wraper').hover(function(){
+			$(this).css('z-index','1000');
+		})
+
+		$('.vitrine-wraper').mouseout(function(){
+			$(this).css('z-index','0');
+		})
+	</script>
+</body>
+</html>
